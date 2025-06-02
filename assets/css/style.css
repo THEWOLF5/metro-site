@@ -1,0 +1,20 @@
+
+body { font-family: sans-serif; margin: 0; background: #000; color: #fff; }
+h1, h2 { font-weight: bold; }
+a { text-decoration: none; color: #0ff; }
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.p-6 { padding: 1.5rem; }
+.my-8 { margin-top: 2rem; margin-bottom: 2rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.w-32 { width: 8rem; }
+.w-48 { width: 12rem; }
+.text-pink-500 { color: #e94699; }
+.text-cyan-400 { color: #5aead1; }
+.bg-black { background-color: #000; }
+.bg-cyan-500 { background-color: #5aead1; }
+.text-gray-300 { color: #d1d5db; }
+.text-gray-400 { color: #9ca3af; }
+.text-gray-600 { color: #4b5563; }
+.rounded { border-radius: 0.25rem; }
+.underline { text-decoration: underline; }
