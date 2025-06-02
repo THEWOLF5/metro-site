@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metro City | לוח אירועים</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script src="../assets/js/main.js" defer></script>
+  <style>
+    .event {
+      background: #1f1f1f;
+      border: 1px solid #5aead1;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      text-align: right;
+    }
+    .event h3 {
+      color: #e94699;
+      margin-bottom: 0.5rem;
+    }
+    .rsvp-btn {
+      margin-top: 0.5rem;
+      background: #5aead1;
+      color: #000;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .rsvp-btn:hover {
+      background: #3ccfcf;
+    }
+  </style>
+</head>
+<body class="bg-black text-white font-sans">
+  <nav class="bg-gray-900 text-white p-4 text-center">
+    <a href="../index.html" class="mx-2 hover:text-pink-400">דף הבית</a>
+    <a href="servers.html" class="mx-2 hover:text-pink-400">שרתים</a>
+    <a href="rules.html" class="mx-2 hover:text-pink-400">חוקים</a>
+    <a href="news.html" class="mx-2 hover:text-pink-400">חדשות</a>
+    <a href="staff.html" class="mx-2 hover:text-pink-400">צוות</a>
+    <a href="events.html" class="mx-2 text-pink-500 underline">אירועים</a>
+  </nav>
+
+  <header class="text-center p-6">
+    <h1 class="text-3xl font-bold">📅 לוח אירועים</h1>
+    <p class="text-gray-400">הירשם לאירועים הקרובים בקהילת Metro City</p>
+  </header>
+
+  <main class="p-6 max-w-3xl mx-auto">
+    <div class="event">
+      <h3>🕵️ מבצע משטרתי גדול</h3>
+      <p>תאריך: 5.6.2025 | שעה: 21:00</p>
+      <p>משימה בלייב למשתמשי PD בלבד. נדרש RSVP מראש.</p>
+      <button class="rsvp-btn" onclick="rsvp('מבצע משטרתי גדול')">אני מגיע</button>
+    </div>
+
+    <div class="event">
+      <h3>🎭 טורניר RP פתוח</h3>
+      <p>תאריך: 8.6.2025 | שעה: 20:00</p>
+      <p>כל השחקנים מוזמנים להשתתף באירוע RP ייחודי עם פרסים.</p>
+      <button class="rsvp-btn" onclick="rsvp('טורניר RP פתוח')">אני מגיע</button>
+    </div>
+  </main>
+
+  <script>
+    function rsvp(eventName) {
+      alert('✅ נרשמת לאירוע: ' + eventName);
+      localStorage.setItem("RSVP_" + eventName, "true");
+    }
+  </script>
+
+  <footer class="text-center text-gray-600 text-sm mt-12 mb-4">
+    &copy; 2025 Metro Community. כל הזכויות שמורות.
+  </footer>
+</body>
+</html>

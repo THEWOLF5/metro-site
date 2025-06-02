@@ -113,3 +113,10 @@ body.light-mode .text-pink-500 {
 body.light-mode .text-cyan-400 {
   color: #0288d1;
 }
+
+body {
+  background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
+}
+body.light-mode {
+  background: linear-gradient(to bottom right, #f4f4f4, #ffffff);
+}
