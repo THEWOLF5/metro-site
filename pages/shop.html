@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metro City | חנות RP</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script src="../assets/js/main.js" defer></script>
+  <style>
+    .shop-item {
+      background: #1f1f1f;
+      border: 1px solid #5aead1;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      text-align: right;
+    }
+    .shop-item h3 {
+      color: #e94699;
+      margin-bottom: 0.5rem;
+    }
+    form input, form select {
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      width: 100%;
+      border-radius: 6px;
+      background: #0f0f0f;
+      border: 1px solid #333;
+      color: #fff;
+    }
+    form button {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body class="bg-black text-white font-sans">
+  <nav class="bg-gray-900 text-white p-4 text-center">
+    <a href="../index.html" class="mx-2 hover:text-pink-400">דף הבית</a>
+    <a href="servers.html" class="mx-2 hover:text-pink-400">שרתים</a>
+    <a href="rules.html" class="mx-2 hover:text-pink-400">חוקים</a>
+    <a href="news.html" class="mx-2 hover:text-pink-400">חדשות</a>
+    <a href="staff.html" class="mx-2 hover:text-pink-400">צוות</a>
+    <a href="shop.html" class="mx-2 text-pink-500 underline">חנות</a>
+  </nav>
+
+  <header class="text-center p-6">
+    <h1 class="text-3xl font-bold">🛒 חנות RP</h1>
+    <p class="text-gray-400">רכוש דרגות, רכבים, בגדים ועוד – בעזרת RP Coins</p>
+  </header>
+
+  <main class="p-6 max-w-3xl mx-auto">
+    <div class="shop-item">
+      <h3>🚗 רכב VIP</h3>
+      <p>דגם רכב ייחודי לקהילה – 150 RP Coins</p>
+    </div>
+
+    <div class="shop-item">
+      <h3>👕 תלבושת ייחודית</h3>
+      <p>בגד בלעדי – 80 RP Coins</p>
+    </div>
+
+    <div class="shop-item">
+      <h3>🧰 פריטים מיוחדים</h3>
+      <p>ערכת כלי עבודה מיוחדת – 50 RP Coins</p>
+    </div>
+
+    <form>
+      <label for="item">בחר מוצר:</label>
+      <select id="item" required>
+        <option value="">בחר מוצר</option>
+        <option>🚗 רכב VIP – 150 RP</option>
+        <option>👕 תלבושת – 80 RP</option>
+        <option>🧰 ערכת כלים – 50 RP</option>
+      </select>
+
+      <label for="name">שם בדמות:</label>
+      <input type="text" id="name" required />
+
+      <label for="discord">דיסקורד:</label>
+      <input type="text" id="discord" required />
+
+      <button type="submit" class="btn">בצע הזמנה</button>
+      <p class="text-sm text-gray-500 mt-2">* טופס דמה – אין תשלום אמיתי</p>
+    </form>
+  </main>
+
+  <footer class="text-center text-gray-600 text-sm mt-12 mb-4">
+    &copy; 2025 Metro Community. כל הזכויות שמורות.
+  </footer>
+</body>
+</html>
