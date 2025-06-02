@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metro City | Theme</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const theme = localStorage.getItem('metro-theme');
+      if (theme) document.body.classList.add(theme);
+
+      document.querySelectorAll('[data-theme]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.body.className = 'font-sans';
+          const selected = btn.dataset.theme;
+          document.body.classList.add(selected);
+          localStorage.setItem('metro-theme', selected);
+        });
+      });
+    });
+  </script>
+  <style>
+    .cyber { background: #0f0f1e; color: #00ffe1; }
+    .gta { background: #202020 url('https://wallpapercave.com/wp/wp8755435.jpg') no-repeat center/cover; color: #fff; }
+    .classic { background: #ffffff; color: #111111; }
+    .theme-btn {
+      padding: 1rem;
+      margin: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .cyber-btn { background: #00ffe1; color: #000; }
+    .gta-btn { background: #2f2f2f; color: #fff; }
+    .classic-btn { background: #f4f4f4; color: #000; }
+  </style>
+</head>
+<body class="bg-black text-white font-sans">
+  <nav class="bg-gray-900 text-white p-4 text-center">
+    <a href="../index.html" class="mx-2 hover:text-pink-400">דף הבית</a>
+    <a href="servers.html" class="mx-2 hover:text-pink-400">שרתים</a>
+    <a href="rules.html" class="mx-2 hover:text-pink-400">חוקים</a>
+    <a href="news.html" class="mx-2 hover:text-pink-400">חדשות</a>
+    <a href="staff.html" class="mx-2 hover:text-pink-400">צוות</a>
+    <a href="themes.html" class="mx-2 text-pink-500 underline">Theme</a>
+  </nav>
+
+  <header class="text-center p-6">
+    <h1 class="text-3xl font-bold">🎨 בחירת Theme</h1>
+    <p class="text-gray-400">בחר את עיצוב האתר שאתה אוהב – נשמר אוטומטית</p>
+  </header>
+
+  <main class="p-6 text-center">
+    <button class="theme-btn cyber-btn" data-theme="cyber">🧬 Cyber Theme</button>
+    <button class="theme-btn gta-btn" data-theme="gta">🚓 GTA Style</button>
+    <button class="theme-btn classic-btn" data-theme="classic">📜 Classic Light</button>
+  </main>
+
+  <footer class="text-center text-gray-600 text-sm mt-12 mb-4">
+    &copy; 2025 Metro Community. כל הזכויות שמורות.
+  </footer>
+</body>
+</html>
