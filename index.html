@@ -1,72 +1,62 @@
 
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Metro City | ברוכים הבאים</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <title>Metro Gaming Community</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(135deg, #0f0f1e, #1a1a2e);
-      color: white;
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: #fff;
     }
-    .hero {
-      text-align: center;
-      padding: 10vh 2rem;
+    .tab-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
     }
-    .hero h1 {
-      font-size: 3rem;
-      color: #e94699;
-      text-shadow: 0 0 10px #e94699;
-    }
-    .hero p {
-      font-size: 1.25rem;
-      color: #5aead1;
-      margin-top: 1rem;
-    }
-    .btn-group {
-      margin-top: 2rem;
-    }
-    .btn {
-      background: #5aead1;
-      color: black;
-      border: none;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      margin: 0.5rem;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-    }
-    .btn:hover {
-      background: #e94699;
-      color: white;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.85rem;
-      padding: 2rem;
-      color: #aaa;
-    }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
   </style>
 </head>
-<body>
-  <div class="hero">
-    <h1>ברוכים הבאים ל־Metro City</h1>
-    <p>קהילת גיימינג מתקדמת ל־FiveM, CS2 ודיסקורד</p>
-    <div class="btn-group">
-      <a href="pages/servers.html" class="btn">🎮 שרתים חיים</a>
-      <a href="https://discord.gg/metrocityrp" target="_blank" class="btn">💬 הצטרף ל־Discord</a>
-      <a href="pages/profile.html" class="btn">👤 פרופיל שחקן</a>
-    </div>
+<body class="min-h-screen px-4 py-8 text-white">
+  <header class="text-center mb-10">
+    <h1 class="text-5xl font-bold tracking-widest">🎮 Metro Gaming</h1>
+    <p class="text-lg text-gray-300">CS2 | FiveM | Community Hub</p>
+  </header>
+
+  <div class="flex justify-center space-x-6 mb-10">
+    <button onclick="showTab('rp')" class="tab-link px-6 py-2 border border-purple-500 rounded">🚓 MetroCity RP</button>
+    <button onclick="showTab('cs')" class="tab-link px-6 py-2 border border-purple-500 rounded">🔫 Metro CS</button>
   </div>
-  <footer>
-    &copy; 2025 Metro Community. כל הזכויות שמורות.
+
+  <section id="rp" class="tab-content active text-center space-y-4">
+    <h2 class="text-2xl font-bold mb-2">🚓 MetroCity RP</h2>
+    <p class="text-gray-300">Join our immersive roleplay experience on FiveM.</p>
+    <a href="https://discord.gg/metrocityrp" class="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded">Join Discord</a>
+    <a href="https://cfx.re/join/pzyld8" class="bg-yellow-500 hover:bg-yellow-600 px-4 py-2 rounded">Join FiveM Server</a>
+  </section>
+
+  <section id="cs" class="tab-content text-center space-y-4">
+    <h2 class="text-2xl font-bold mb-2">🔫 Metro CS</h2>
+    <p class="text-gray-300">Compete with the best on our Counter-Strike 2 servers.</p>
+    <a href="https://discord.gg/YwaadwB62F" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded">Join Discord</a>
+    <div class="text-sm mt-2">
+      <p>Server IPs:</p>
+      <p>213.139.78.238:27015</p>
+      <p>213.139.78.238:27016</p>
+      <p>213.139.78.238:27017</p>
+    </div>
+  </section>
+
+  <footer class="mt-20 text-center text-sm text-gray-400">
+    &copy; 2025 Metro Gaming Community. All rights reserved.
   </footer>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
