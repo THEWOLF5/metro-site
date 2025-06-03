@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Connecting to CS2 Server 27017</title>
+  <script>
+    window.onload = () => {
+      window.location.href = "steam://connect/213.139.78.238:27017";
+      setTimeout(() => {
+        document.getElementById("fallback").style.display = "block";
+      }, 3000);
+    };
+  </script>
+</head>
+<body style="background-color:#0f0f0f; color:white; text-align:center; padding:50px;">
+  <h1>🎮 Connecting to CS2 Server 213.139.78.238:27017...</h1>
+  <p>If Steam is installed, it should open automatically.</p>
+  <div id="fallback" style="display:none;">
+    <p>If nothing happened, copy and paste this into your browser:</p>
+    <code>steam://connect/213.139.78.238:27017</code>
+  </div>
+</body>
+</html>
